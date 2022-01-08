@@ -74,11 +74,11 @@ public class SwingNightStick : MonoBehaviour
                 Destroy(go);
                 enemiesToDestroy.Remove(go);
                 toxicity = go.GetComponent<AttackPlayer>().toxicity;
-                if (toxicity < 0.4){
+                if (toxicity < 2)
+                {
                     gameObject.GetComponent<HeartSystem>().TakeDamage();
-                    PlayerStats.Score -= 10;
                 }
-                PlayerStats.Score += 20;
+                PlayerStats.Score += Mathf.RoundToInt((toxicity - 3) * 10);
             }
             animationOver = false;
         }

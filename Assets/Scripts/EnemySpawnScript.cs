@@ -38,6 +38,8 @@ public class EnemySpawnScript : MonoBehaviour
             "I feel you should jump off a cliff",
             "Don't ruin my day, shut up now"
         };
+
+        int[] scores = {1,1,4,3,5,1,2,1,1,5,5,5,1,5,1,4,5,5};
         for (int i = 0; i < numEnemies; i++)
         {
             tries = 0;
@@ -73,7 +75,7 @@ public class EnemySpawnScript : MonoBehaviour
             go.SendMessage("InitComment", randomComment);
             StartCoroutine(getToxicity(randomComment, go));
             //HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://localhost:3000/getCommentToxicity", CityId, API_KEY));
-            go.SendMessage("Create", Random.Range(0.0f, 5.0f));
+            go.SendMessage("Create", scores[randomIndex]);
         }
 
         IEnumerator getToxicity(string randomComment, GameObject go)

@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scripts/DisplayComment.cs
+    - Assets/Scripts/GameMgr.cs
+    - Assets/Scripts/SwingNightStick.cs
     - 
-    m_Values: 0101
-  RevisionSummary: disabled speech bubbles after entering room
+    m_Values: 000000
+  RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0

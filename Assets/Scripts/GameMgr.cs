@@ -21,10 +21,12 @@ public class GameMgr : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         LoadingScreen.gameObject.SetActive(false);
         SceneManager.LoadScene("SampleScene");
-        
+
     }
 
-    public void restartAfterQuit(){
-         SceneManager.LoadScene("SampleScene");
+    public void restartAfterQuit()
+    {
+        SceneManager.LoadScene("SampleScene");
+        PlayerStats.Score = 0;
     }
 }
